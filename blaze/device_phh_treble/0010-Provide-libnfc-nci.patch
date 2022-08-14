@@ -1,0 +1,24 @@
+From a73a41a6514872a6767cf91388b4fc52840fd121 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Sun, 14 Aug 2022 23:25:03 +0900
+Subject: [PATCH 10/10] Provide libnfc-nci
+
+---
+ base.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/base.mk b/base.mk
+index 077ada0..9d31ff1 100644
+--- a/base.mk
++++ b/base.mk
+@@ -50,6 +50,7 @@ PRODUCT_COPY_FILES += \
+ #   Provide default libnfc-nci.conf file for devices that does not have one in
+ #   vendor/etc
+ PRODUCT_COPY_FILES += \
++	system/nfc/conf/libnfc-nci.conf:system/etc/libnfc-nci.conf \
+ 	device/phh/treble/nfc/libnfc-nci.conf:system/phh/libnfc-nci-oreo.conf \
+ 	device/phh/treble/nfc/libnfc-nci-huawei.conf:system/phh/libnfc-nci-huawei.conf
+ 
+-- 
+2.37.1.windows.1
+

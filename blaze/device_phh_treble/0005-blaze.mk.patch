@@ -1,0 +1,22 @@
+From 5e3781dc25d842917100f5f2808edaaba9a0b069 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Sun, 14 Aug 2022 23:11:03 +0900
+Subject: [PATCH 05/10] blaze.mk
+
+---
+ blaze.mk | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 blaze.mk
+
+diff --git a/blaze.mk b/blaze.mk
+new file mode 100644
+index 0000000..e82a3f8
+--- /dev/null
++++ b/blaze.mk
+@@ -0,0 +1,3 @@
++$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
++-include vendor/blaze/build/core/config.mk
++-include vendor/blaze/build/core/apicheck.mk
+-- 
+2.37.1.windows.1
+
