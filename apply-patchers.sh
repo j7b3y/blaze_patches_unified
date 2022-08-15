@@ -3,17 +3,15 @@
 set -e
 
 patches="$(readlink -f -- $1)"
-tree="$2"
-branches="$3 common"
-
-for project in $patches/*; do
-    for project in $(cd $patches/*/$project; echo *); do
+trees=`ls -l $1 | grep ^d | awk '{print $9}'`
+for tree in $trees; do
+    for project in $(cd $patches/$tree; echo *); do
         p="$(tr _ / <<<$project |sed -e 's;platform/;;g')"
         [ "$p" == build ] && p=build/make
         [ "$p" == treble/app ] && p=treble_app
         [ "$p" == vendor/hardware/overlay ] && p=vendor/hardware_overlay
         pushd $p &>/dev/null
-        for patch in $patches/patches/$tree/$b/$project/*.patch; do
+        for patch in $patches/$tree/$project/*.patch; do
             git am $patch || exit
         done
         popd &>/dev/null
