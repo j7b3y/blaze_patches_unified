@@ -1,0 +1,25 @@
+From 163f8f39f35825c74c386dba11c63e29edd20584 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Mon, 15 Aug 2022 22:09:29 +0900
+Subject: [PATCH 8/8] Add broken duplicate rules flag
+
+---
+ board-base.mk | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/board-base.mk b/board-base.mk
+index 87cf710..f5d330a 100644
+--- a/board-base.mk
++++ b/board-base.mk
+@@ -9,4 +9,5 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+ BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
+ 
+ BOARD_EXT4_SHARE_DUP_BLOCKS := true
+-TARGET_NO_KERNEL_OVERRIDE := true
+\ No newline at end of file
++TARGET_NO_KERNEL_OVERRIDE := true
++BUILD_BROKEN_DUP_RULES := true
+\ No newline at end of file
+-- 
+2.37.1.windows.1
+

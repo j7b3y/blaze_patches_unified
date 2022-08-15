@@ -1,14 +1,14 @@
-From dc27eaa68904da54c98d33e44fa0085893d10ee7 Mon Sep 17 00:00:00 2001
+From d4dcd14a9a212262b4007498c1245cdb8a3ae0b9 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Sun, 14 Aug 2022 22:52:17 +0900
-Subject: [PATCH 03/12] fix context
+Date: Mon, 15 Aug 2022 22:07:39 +0900
+Subject: [PATCH 5/8] fix context
 
 ---
- sepolicy/file_contexts | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ sepolicy/file_contexts | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/sepolicy/file_contexts b/sepolicy/file_contexts
-index 999ff97..aa0c8ef 100644
+index 999ff97..ab6a4e7 100644
 --- a/sepolicy/file_contexts
 +++ b/sepolicy/file_contexts
 @@ -7,8 +7,7 @@
@@ -21,6 +21,11 @@ index 999ff97..aa0c8ef 100644
  
  /bt_firmware(/.*)?      u:object_r:bt_firmware_file:s0
  
+@@ -20,4 +19,3 @@
+ 
+ /efs u:object_r:efs_file:s0
+ 
+-/dev/smcinvoke u:object_r:smcinvoke_device:s0
 -- 
 2.37.1.windows.1
 

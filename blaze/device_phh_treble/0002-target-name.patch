@@ -1,0 +1,25 @@
+From 6cc8614f80719f6d2bc6d9d705817ee6c3f01e7b Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Mon, 15 Aug 2022 22:05:43 +0900
+Subject: [PATCH 2/8] target name
+
+---
+ generate.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/generate.sh b/generate.sh
+index fac8208..5037834 100644
+--- a/generate.sh
++++ b/generate.sh
+@@ -64,7 +64,7 @@ for part in a ab;do
+ 					optional_base='$(call inherit-product, device/phh/treble/base-sas.mk)'
+ 				fi
+ 
+-				target="treble_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
++				target="blaze_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
+ 
+ 				baseArch="$arch"
+ 				if [ "$arch" = "a64" ];then
+-- 
+2.37.1.windows.1
+
