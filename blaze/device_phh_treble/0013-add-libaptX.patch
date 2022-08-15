@@ -1,0 +1,36 @@
+From b7e0b5758e09abb6a7716ebeed81f2ff422a1bae Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Mon, 15 Aug 2022 21:21:31 +0900
+Subject: [PATCH 808/809] add libaptX
+
+---
+ generate.sh | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/generate.sh b/generate.sh
+index 84d1e3d..4a09a54 100644
+--- a/generate.sh
++++ b/generate.sh
+@@ -64,7 +64,7 @@ for part in a ab;do
+ 					optional_base='$(call inherit-product, device/phh/treble/base-sas.mk)'
+ 				fi
+ 
+-				target="lineage_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
++				target="blaze_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
+ 
+ 				baseArch="$arch"
+ 				if [ "$arch" = "a64" ];then
+@@ -94,7 +94,9 @@ PRODUCT_MODEL := Phh-Treble $apps_name
+ # Overwrite the inherited "emulator" characteristics
+ PRODUCT_CHARACTERISTICS := device
+ 
+-PRODUCT_PACKAGES += $extra_packages
++PRODUCT_PACKAGES += $extra_packages \
++		ibaptX_encoder \
++    	libaptXHD_encoder
+ 
+ EOF
+ echo -e '\t$(LOCAL_DIR)/'$target.mk '\' >> AndroidProducts.mk
+-- 
+2.36.1
+

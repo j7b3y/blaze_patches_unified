@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set +e
 
 patches="$(readlink -f -- $1)"
 trees=`ls -l $1 | grep ^d | awk '{print $9}'`
@@ -10,10 +10,10 @@ for tree in $trees; do
         [ "$p" == build ] && p=build/make
         [ "$p" == treble/app ] && p=treble_app
         [ "$p" == vendor/hardware/overlay ] && p=vendor/hardware_overlay
-        pushd $p &>/dev/null
+        pushd $p
         for patch in $patches/$tree/$project/*.patch; do
-            git am $patch || exit
+            git am $patch
         done
-        popd &>/dev/null
+        popd
     done
 done

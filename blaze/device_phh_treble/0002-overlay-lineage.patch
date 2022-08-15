@@ -36,7 +36,7 @@ index fac8208..84d1e3d 100644
  				fi
  
 -				target="treble_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
-+				target="lineage_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
++				target="blaze_${arch}_${part_suffix}${apps_suffix}${su_suffix}"
  
  				baseArch="$arch"
  				if [ "$arch" = "a64" ];then
