@@ -1,7 +1,7 @@
 From 19119ff5185b5f0f9615149164bd3ff6e907174b Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Mon, 15 Aug 2022 22:56:01 +0900
-Subject: [PATCH 7/7] blaze.mk
+Subject: [PATCH 7/8] blaze.mk
 
 ---
  blaze.mk | 12 ++++++++++++
