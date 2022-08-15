@@ -1,21 +1,21 @@
-From 6e7528e65010bb2987d6f6eaf34976e25dad5d70 Mon Sep 17 00:00:00 2001
+From 5ec32e67a5ad31c3ee0523e30b607cfec651b49b Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Sun, 14 Aug 2022 22:53:14 +0900
-Subject: [PATCH 03/10] Set BOARD_EXT4_SHARE_DUP_BLOCKS explicitly
+Date: Sun, 14 Aug 2022 23:04:44 +0900
+Subject: [PATCH 05/12] fix BOARD_KERNEL_IMAGE_NAME not defined
 
 ---
  board-base.mk | 1 +
  1 file changed, 1 insertion(+)
 
 diff --git a/board-base.mk b/board-base.mk
-index 1ddacaf..9570386 100644
+index 9570386..3ae8eac 100644
 --- a/board-base.mk
 +++ b/board-base.mk
-@@ -5,5 +5,6 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := device/phh/treble/framework_manifest.xml
- 
+@@ -6,5 +6,6 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := device/phh/treble/framework_manifest.xml
  BOARD_ROOT_EXTRA_FOLDERS += bt_firmware sec_storage efs persist
  BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-+BOARD_EXT4_SHARE_DUP_BLOCKS := true
+ BOARD_EXT4_SHARE_DUP_BLOCKS := true
++TARGET_NO_KERNEL_OVERRIDE := true
  
  BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
 -- 

@@ -1,7 +1,7 @@
 From 7839b05250a3c0ccd4d2fe8f66ec4290445d26ab Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Sun, 14 Aug 2022 23:23:59 +0900
-Subject: [PATCH 09/10] Rework securize tweak
+Subject: [PATCH 10/12] Rework securize tweak
 
 ---
  base.mk      |  1 -

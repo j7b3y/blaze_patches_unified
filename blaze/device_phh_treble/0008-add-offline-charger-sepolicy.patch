@@ -1,7 +1,7 @@
 From 96a06ab38608a4fe94410eb8ef64badea91210f7 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Sun, 14 Aug 2022 23:14:46 +0900
-Subject: [PATCH 07/10] add offline charger sepolicy
+Subject: [PATCH 08/12] add offline charger sepolicy
 
 ---
  sepolicy/gsicharger.te | 1 +

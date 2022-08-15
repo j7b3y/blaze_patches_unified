@@ -1,7 +1,7 @@
 From 0b1674dc52608d5406bfbff20a4789cc90c4f4eb Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Sun, 14 Aug 2022 23:12:08 +0900
-Subject: [PATCH 06/10] set OTA URL
+Subject: [PATCH 07/12] set OTA URL
 
 ---
  blaze.mk | 3 +++

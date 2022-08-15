@@ -1,7 +1,7 @@
 From f1cdf3611c60aa09f069e381119ff3cf1b9143cd Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Sun, 14 Aug 2022 22:50:30 +0900
-Subject: [PATCH 01/10] overlay-lineage
+Subject: [PATCH 02/12] overlay-lineage
 
 ---
  base.mk                                       |  5 +-

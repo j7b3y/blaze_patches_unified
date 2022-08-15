@@ -1,7 +1,7 @@
 From a73a41a6514872a6767cf91388b4fc52840fd121 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Sun, 14 Aug 2022 23:25:03 +0900
-Subject: [PATCH 10/10] Provide libnfc-nci
+Subject: [PATCH 11/12] Provide libnfc-nci
 
 ---
  base.mk | 1 +

@@ -1,7 +1,7 @@
 From dc27eaa68904da54c98d33e44fa0085893d10ee7 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Sun, 14 Aug 2022 22:52:17 +0900
-Subject: [PATCH 02/10] fix context
+Subject: [PATCH 03/12] fix context
 
 ---
  sepolicy/file_contexts | 3 +--
