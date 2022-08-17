@@ -1,7 +1,7 @@
 From 59a75a4ae030b54fddd7508c83ca2f0db7b853df Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Wed, 17 Aug 2022 10:25:57 +0900
-Subject: [PATCH 2/3] Only use meizu-vibrator on Meizu 18
+Subject: [PATCH 2/4] Only use meizu-vibrator on Meizu 18
 
 ---
  framework_manifest.xml                                |  9 ---------
