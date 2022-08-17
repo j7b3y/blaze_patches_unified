@@ -1,7 +1,7 @@
-From 19119ff5185b5f0f9615149164bd3ff6e907174b Mon Sep 17 00:00:00 2001
+From ec1da96a969b9ae0da3c1f37aa5d9b1458dc7e66 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Mon, 15 Aug 2022 22:56:01 +0900
-Subject: [PATCH 7/8] blaze.mk
+Date: Wed, 17 Aug 2022 12:51:44 +0900
+Subject: [PATCH 7/8] Add blaze.mk
 
 ---
  blaze.mk | 12 ++++++++++++
@@ -10,7 +10,7 @@ Subject: [PATCH 7/8] blaze.mk
 
 diff --git a/blaze.mk b/blaze.mk
 new file mode 100644
-index 0000000..246cd69
+index 0000000..b1f6af2
 --- /dev/null
 +++ b/blaze.mk
 @@ -0,0 +1,12 @@
@@ -26,6 +26,7 @@ index 0000000..246cd69
 +    libaptXHD_encoder
 +PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 +    ro.system.ota.json_url=https://raw.githubusercontent.com/j7b3y/treble_pb/master/ota.json
+\ No newline at end of file
 -- 
 2.37.1.windows.1
 

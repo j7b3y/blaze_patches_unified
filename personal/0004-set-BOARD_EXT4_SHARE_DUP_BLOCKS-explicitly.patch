@@ -1,6 +1,6 @@
-From 96fb6f7f383255ce638ee919f2a34a2ec6187356 Mon Sep 17 00:00:00 2001
+From ecf1d79ce27dfc86001c989fa4613969066445c4 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Mon, 15 Aug 2022 22:54:26 +0900
+Date: Wed, 17 Aug 2022 12:49:46 +0900
 Subject: [PATCH 4/8] set BOARD_EXT4_SHARE_DUP_BLOCKS explicitly
 
 ---

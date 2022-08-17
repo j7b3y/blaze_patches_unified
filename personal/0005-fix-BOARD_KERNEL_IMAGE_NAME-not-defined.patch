@@ -1,6 +1,6 @@
-From 137c79d6629159bc39bc8221732f516612077bb4 Mon Sep 17 00:00:00 2001
+From 3c780ae74589bf69c7a6184a770206d0cde509a1 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Mon, 15 Aug 2022 22:54:47 +0900
+Date: Wed, 17 Aug 2022 12:50:22 +0900
 Subject: [PATCH 5/8] fix BOARD_KERNEL_IMAGE_NAME not defined
 
 ---

@@ -1,14 +1,14 @@
-From 7af9acaaceeaa2f647221bcbb6ca8852df7422cf Mon Sep 17 00:00:00 2001
+From 7398178e9995ec179adc16f50e3257cba139ccc4 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Mon, 15 Aug 2022 22:51:46 +0900
-Subject: [PATCH 3/8] fic context
+Date: Wed, 17 Aug 2022 12:49:14 +0900
+Subject: [PATCH 3/8] fix context
 
 ---
- sepolicy/file_contexts | 3 ---
- 1 file changed, 3 deletions(-)
+ sepolicy/file_contexts | 2 --
+ 1 file changed, 2 deletions(-)
 
 diff --git a/sepolicy/file_contexts b/sepolicy/file_contexts
-index 999ff97..d7c900a 100644
+index 999ff97..e02fc87 100644
 --- a/sepolicy/file_contexts
 +++ b/sepolicy/file_contexts
 @@ -7,8 +7,6 @@
@@ -20,11 +20,6 @@ index 999ff97..d7c900a 100644
  
  /bt_firmware(/.*)?      u:object_r:bt_firmware_file:s0
  
-@@ -20,4 +18,3 @@
- 
- /efs u:object_r:efs_file:s0
- 
--/dev/smcinvoke u:object_r:smcinvoke_device:s0
 -- 
 2.37.1.windows.1
 
