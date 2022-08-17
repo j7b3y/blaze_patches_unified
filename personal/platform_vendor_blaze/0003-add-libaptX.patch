@@ -1,0 +1,30 @@
+From 815fa0a2ba597326705cef8dd934ca1e84f0aa5e Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Mon, 15 Aug 2022 08:27:19 +0900
+Subject: [PATCH 1/2] add libaptX
+
+---
+ build/target/product/blaze_arm64.mk | 5 +++++
+ config/version.mk                   | 2 +-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/build/target/product/blaze_arm64.mk b/build/target/product/blaze_arm64.mk
+index a90cfd95..d63c7477 100644
+--- a/build/target/product/blaze_arm64.mk
++++ b/build/target/product/blaze_arm64.mk
+@@ -20,6 +20,11 @@ include vendor/blaze/build/target/product/blaze_generic_target.mk
+ TARGET_NO_KERNEL_OVERRIDE := true
+ 
+ PRODUCT_NAME := blaze_arm64
++PRODUCT_PACKAGES += \
++    libaptX_encoder \
++    libaptXHD_encoder
++
++
+ 
+ # Enable mainline checking
+ PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
+\ No newline at end of file
+-- 
+2.36.1
+
