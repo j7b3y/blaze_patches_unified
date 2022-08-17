@@ -1,0 +1,22 @@
+From 96fb6f7f383255ce638ee919f2a34a2ec6187356 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Mon, 15 Aug 2022 22:54:26 +0900
+Subject: [PATCH 4/8] set BOARD_EXT4_SHARE_DUP_BLOCKS explicitly
+
+---
+ board-base.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/board-base.mk b/board-base.mk
+index 1ddacaf..9430349 100644
+--- a/board-base.mk
++++ b/board-base.mk
+@@ -7,3 +7,4 @@ BOARD_ROOT_EXTRA_FOLDERS += bt_firmware sec_storage efs persist
+ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+ 
+ BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
++BOARD_EXT4_SHARE_DUP_BLOCKS := true
+\ No newline at end of file
+-- 
+2.37.1.windows.1
+

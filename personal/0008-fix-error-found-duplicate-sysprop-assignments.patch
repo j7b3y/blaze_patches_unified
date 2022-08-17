@@ -1,0 +1,47 @@
+From 82d9c26d3c6d6c7322bda7d247c54e0c534902c4 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Tue, 16 Aug 2022 07:40:17 +0900
+Subject: [PATCH 8/8] fix:error found duplicate sysprop assignments:
+
+---
+ base.mk      | 1 -
+ rw-system.sh | 1 -
+ system.prop  | 1 -
+ 3 files changed, 3 deletions(-)
+
+diff --git a/base.mk b/base.mk
+index 6eb32ed..e3fa84c 100644
+--- a/base.mk
++++ b/base.mk
+@@ -25,7 +25,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+ 	ro.build.version.all_codenames=$(PLATFORM_VERSION_ALL_CODENAMES) \
+ 	ro.build.version.release=$(PLATFORM_VERSION) \
+ 	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
+-	ro.adb.secure=0 \
+ 	ro.logd.auditd=true
+ 	
+ #Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
+diff --git a/rw-system.sh b/rw-system.sh
+index 2173b91..691ff76 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -766,7 +766,6 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
+     resetprop_phh ro.build.type user
+     resetprop_phh ro.build.selinux 0
+ 
+-    resetprop_phh ro.adb.secure 1
+     setprop ctl.restart adbd
+ 
+     # Hide system/xbin/su
+diff --git a/system.prop b/system.prop
+index a6c7ede..127b782 100644
+--- a/system.prop
++++ b/system.prop
+@@ -1,4 +1,3 @@
+-ro.adb.secure=0
+ #Some devices have sdcardfs kernel panicing on 8.0
+ #Disable for everyone for the moment
+ ro.sys.sdcardfs=0
+-- 
+2.37.1.windows.1
+
