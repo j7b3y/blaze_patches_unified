@@ -1,0 +1,24 @@
+From b205bf8392fa90de7293015d2f037580acef7c3f Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Mon, 15 Aug 2022 08:07:51 +0900
+Subject: [PATCH] ro.blaze.device err fix
+
+---
+ tools/buildinfo.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tools/buildinfo.sh b/tools/buildinfo.sh
+index 8101ef8a7..cd2f55c62 100755
+--- a/tools/buildinfo.sh
++++ b/tools/buildinfo.sh
+@@ -56,6 +56,6 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
+   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
+ fi
+ 
+-echo "ro.blaze.device=$BLAZE_DEVICE"
++
+ 
+ echo "# end build properties"
+-- 
+2.37.1
+
