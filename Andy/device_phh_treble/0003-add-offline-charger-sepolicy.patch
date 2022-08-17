@@ -1,0 +1,21 @@
+From a4b2347df7b5eff59830e1c99c70d6e5ffaaee5a Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Wed, 17 Aug 2022 10:27:02 +0900
+Subject: [PATCH 3/3] add offline charger sepolicy
+
+---
+ sepolicy/gsicharger.te | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sepolicy/gsicharger.te
+
+diff --git a/sepolicy/gsicharger.te b/sepolicy/gsicharger.te
+new file mode 100644
+index 0000000..a50f885
+--- /dev/null
++++ b/sepolicy/gsicharger.te
+@@ -0,0 +1 @@
++permissive charger;
+\ No newline at end of file
+-- 
+2.37.1.windows.1
+
