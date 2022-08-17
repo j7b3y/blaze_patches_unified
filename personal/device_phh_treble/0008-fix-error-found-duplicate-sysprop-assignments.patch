@@ -1,12 +1,13 @@
-From c144a1736fa0a036bcb81f9b9a5056c845f906d6 Mon Sep 17 00:00:00 2001
+From 185c93a7a6a18b813f8b0fac1d21f862d36a5759 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Wed, 17 Aug 2022 12:52:41 +0900
+Date: Wed, 17 Aug 2022 18:58:47 +0900
 Subject: [PATCH 8/8] fix:error found duplicate sysprop assignments:
 
 ---
  base.mk      | 1 -
  rw-system.sh | 1 -
- 2 files changed, 2 deletions(-)
+ system.prop  | 1 -
+ 3 files changed, 3 deletions(-)
 
 diff --git a/base.mk b/base.mk
 index 83c0521..a15836c 100644
@@ -32,6 +33,15 @@ index 396312f..9f80787 100644
      setprop ctl.restart adbd
  
      # Hide system/xbin/su
+diff --git a/system.prop b/system.prop
+index a6c7ede..127b782 100644
+--- a/system.prop
++++ b/system.prop
+@@ -1,4 +1,3 @@
+-ro.adb.secure=0
+ #Some devices have sdcardfs kernel panicing on 8.0
+ #Disable for everyone for the moment
+ ro.sys.sdcardfs=0
 -- 
 2.37.1.windows.1
 

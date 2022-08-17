@@ -1,4 +1,4 @@
-From a7010c8803f9b7fa4666d4bdfb44ffcc797ad7b9 Mon Sep 17 00:00:00 2001
+From f256a57f304be113ff2ecd408e1a2399f35610b6 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Wed, 17 Aug 2022 10:27:02 +0900
 Subject: [PATCH 3/4] add offline charger sepolicy

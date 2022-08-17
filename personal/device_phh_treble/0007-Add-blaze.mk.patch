@@ -1,4 +1,4 @@
-From ec1da96a969b9ae0da3c1f37aa5d9b1458dc7e66 Mon Sep 17 00:00:00 2001
+From 574e2b68bc8403e816fcdab85fe42fa352fc9c15 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Wed, 17 Aug 2022 12:51:44 +0900
 Subject: [PATCH 7/8] Add blaze.mk
