@@ -1,0 +1,82 @@
+From 79c355c720fb4bf19c6b471eeb3fade3f9c97638 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Fri, 19 Aug 2022 22:51:55 +0900
+Subject: [PATCH] build: Remove llkd&Remove init.vndk-nodef.rc
+
+---
+ target/product/base_system.mk         |  1 -
+ target/product/gsi/Android.mk         | 10 ----------
+ target/product/gsi/init.gsi.rc        |  4 +---
+ target/product/gsi/init.vndk-nodef.rc |  3 ---
+ target/product/gsi_release.mk         |  1 -
+ 5 files changed, 1 insertion(+), 18 deletions(-)
+
+diff --git a/target/product/base_system.mk b/target/product/base_system.mk
+index 6d149b89e..94feb55da 100644
+--- a/target/product/base_system.mk
++++ b/target/product/base_system.mk
+@@ -202,7 +202,6 @@ PRODUCT_PACKAGES += \
+     libwilhelm \
+     linker \
+     linkerconfig \
+-    llkd \
+     lmkd \
+     LocalTransport \
+     locksettings \
+diff --git a/target/product/gsi/Android.mk b/target/product/gsi/Android.mk
+index 85e551d3f..4d02d3550 100644
+--- a/target/product/gsi/Android.mk
++++ b/target/product/gsi/Android.mk
+@@ -236,17 +236,7 @@ include $(BUILD_PREBUILT)
+ #####################################################################
+ # init.gsi.rc, GSI-specific init script.
+ 
+-include $(CLEAR_VARS)
+-LOCAL_MODULE := init.gsi.rc
+-LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
+-LOCAL_LICENSE_CONDITIONS := notice
+-LOCAL_NOTICE_FILE := build/soong/licenses/LICENSE
+-LOCAL_SRC_FILES := $(LOCAL_MODULE)
+-LOCAL_MODULE_CLASS := ETC
+-LOCAL_SYSTEM_EXT_MODULE := true
+-LOCAL_MODULE_RELATIVE_PATH := init
+ 
+-include $(BUILD_PREBUILT)
+ 
+ 
+ include $(CLEAR_VARS)
+diff --git a/target/product/gsi/init.gsi.rc b/target/product/gsi/init.gsi.rc
+index 69c8e467b..6881b5895 100644
+--- a/target/product/gsi/init.gsi.rc
++++ b/target/product/gsi/init.gsi.rc
+@@ -1,5 +1,3 @@
+ #
+ # Android init script for GSI required initialization
+-#
+-
+-import /system/system_ext/etc/gsi/init.vndk-${ro.vndk.version:-nodef}.rc
++#
+\ No newline at end of file
+diff --git a/target/product/gsi/init.vndk-nodef.rc b/target/product/gsi/init.vndk-nodef.rc
+index 1b141a05e..e69de29bb 100644
+--- a/target/product/gsi/init.vndk-nodef.rc
++++ b/target/product/gsi/init.vndk-nodef.rc
+@@ -1,3 +0,0 @@
+-on early-init
+-    # Reboot if BOARD_VNDK_VERSION is not defined
+-    exec - root -- /system/bin/reboot bootloader
+diff --git a/target/product/gsi_release.mk b/target/product/gsi_release.mk
+index 74501cd1f..575e90b14 100644
+--- a/target/product/gsi_release.mk
++++ b/target/product/gsi_release.mk
+@@ -60,7 +60,6 @@ PRODUCT_PACKAGES += com.android.apex.cts.shim.v1_with_prebuilts.flattened
+ PRODUCT_PACKAGES += \
+     gsi_skip_mount.cfg \
+     init.gsi.rc \
+-    init.vndk-nodef.rc \
+ 
+ # Support additional VNDK snapshots
+ PRODUCT_EXTRA_VNDK_VERSIONS := \
+-- 
+2.36.1
+

@@ -1,6 +1,6 @@
-From b661ef8de62317616e65344a8d5a0a0064fe9932 Mon Sep 17 00:00:00 2001
+From 1978ef6531c17ea174ddeb914e223791dcf7c1d0 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Mon, 15 Aug 2022 07:46:45 +0900
+Date: Fri, 19 Aug 2022 22:59:28 +0900
 Subject: [PATCH 2/2] Remove duplicate ro.adb.secure
 
 ---
@@ -8,10 +8,10 @@ Subject: [PATCH 2/2] Remove duplicate ro.adb.secure
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/config/common.mk b/config/common.mk
-index 38d82807..b622eb27 100644
+index 44477bab..6b355beb 100644
 --- a/config/common.mk
 +++ b/config/common.mk
-@@ -17,8 +17,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
+@@ -18,8 +18,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
  # Disable ADB authentication
  PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
  else
