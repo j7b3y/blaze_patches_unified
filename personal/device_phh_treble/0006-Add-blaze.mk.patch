@@ -1,24 +1,25 @@
-From 574e2b68bc8403e816fcdab85fe42fa352fc9c15 Mon Sep 17 00:00:00 2001
+From 7622f46245160a34c8f262b14f90cd2bbbe6b385 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Wed, 17 Aug 2022 12:51:44 +0900
-Subject: [PATCH 7/8] Add blaze.mk
+Date: Fri, 19 Aug 2022 20:43:09 +0900
+Subject: [PATCH 6/7] Add blaze.mk
 
 ---
- blaze.mk | 12 ++++++++++++
- 1 file changed, 12 insertions(+)
+ blaze.mk | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
  create mode 100644 blaze.mk
 
 diff --git a/blaze.mk b/blaze.mk
 new file mode 100644
-index 0000000..b1f6af2
+index 0000000..d15cc46
 --- /dev/null
 +++ b/blaze.mk
-@@ -0,0 +1,12 @@
+@@ -0,0 +1,13 @@
 +$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 +-include vendor/blaze/build/core/config.mk
 +-include vendor/blaze/build/core/apicheck.mk
 +
 +TARGET_BOOT_ANIMATION_RES := 1080
++BLAZE_MAINTAINER := j7b3y
 +TARGET_SUPPORTS_QUICK_TAP := true
 +TARGET_SUPPORTS_CALL_RECORDING := true
 +PRODUCT_PACKAGES += \

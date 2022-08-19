@@ -1,0 +1,25 @@
+From f5348dc3508943d45104970c148199e49d6e22df Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Fri, 19 Aug 2022 20:15:19 +0900
+Subject: [PATCH 2/3] Revert "Include sim toolkit app
+
+---
+ base.mk | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/base.mk b/base.mk
+index 425fb5d..fd1f120 100644
+--- a/base.mk
++++ b/base.mk
+@@ -159,8 +159,6 @@ PRODUCT_PACKAGES += \
+ 	xiaomi-motor \
+ 	oneplus-motor
+ 
+-PRODUCT_PACKAGES += \
+-	Stk
+ 
+ PRODUCT_PACKAGES += \
+ 	resetprop_phh
+-- 
+2.37.1.windows.1
+

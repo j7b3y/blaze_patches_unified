@@ -1,7 +1,7 @@
-From 185c93a7a6a18b813f8b0fac1d21f862d36a5759 Mon Sep 17 00:00:00 2001
+From 1d160c0005aba6405c78ae6c73126b3d329ebbf6 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Wed, 17 Aug 2022 18:58:47 +0900
-Subject: [PATCH 8/8] fix:error found duplicate sysprop assignments:
+Date: Fri, 19 Aug 2022 21:06:43 +0900
+Subject: [PATCH 7/7] fix:error found duplicate sysprop assignments
 
 ---
  base.mk      | 1 -
@@ -10,10 +10,10 @@ Subject: [PATCH 8/8] fix:error found duplicate sysprop assignments:
  3 files changed, 3 deletions(-)
 
 diff --git a/base.mk b/base.mk
-index 83c0521..a15836c 100644
+index c538a27..f5a9702 100644
 --- a/base.mk
 +++ b/base.mk
-@@ -24,7 +24,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+@@ -25,7 +25,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
  	ro.build.version.all_codenames=$(PLATFORM_VERSION_ALL_CODENAMES) \
  	ro.build.version.release=$(PLATFORM_VERSION) \
  	ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH) \
@@ -22,10 +22,10 @@ index 83c0521..a15836c 100644
  	
  #Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
 diff --git a/rw-system.sh b/rw-system.sh
-index 396312f..9f80787 100644
+index a32636d..fc17ac4 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -766,7 +766,6 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
+@@ -772,7 +772,6 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
      resetprop_phh ro.build.type user
      resetprop_phh ro.build.selinux 0
  

@@ -1,24 +1,24 @@
-From b520566c88d8f08ff068e275d13edf3b1b700671 Mon Sep 17 00:00:00 2001
+From c6438beb3c5ae76702b33173cbd3cf5462dddd90 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
-Date: Wed, 17 Aug 2022 12:50:22 +0900
-Subject: [PATCH 5/8] fix BOARD_KERNEL_IMAGE_NAME not defined
+Date: Fri, 19 Aug 2022 20:31:52 +0900
+Subject: [PATCH 5/7] Add broken duplicate rules flag
 
 ---
  board-base.mk | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/board-base.mk b/board-base.mk
-index 9430349..30981a0 100644
+index 87cf710..f5d330a 100644
 --- a/board-base.mk
 +++ b/board-base.mk
-@@ -7,4 +7,5 @@ BOARD_ROOT_EXTRA_FOLDERS += bt_firmware sec_storage efs persist
- BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
- 
+@@ -9,4 +9,5 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
  BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
--BOARD_EXT4_SHARE_DUP_BLOCKS := true
+ 
+ BOARD_EXT4_SHARE_DUP_BLOCKS := true
+-TARGET_NO_KERNEL_OVERRIDE := true
 \ No newline at end of file
-+BOARD_EXT4_SHARE_DUP_BLOCKS := true
 +TARGET_NO_KERNEL_OVERRIDE := true
++BUILD_BROKEN_DUP_RULES := true
 \ No newline at end of file
 -- 
 2.37.1.windows.1
