@@ -1,7 +1,7 @@
 From 1d160c0005aba6405c78ae6c73126b3d329ebbf6 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Fri, 19 Aug 2022 21:06:43 +0900
-Subject: [PATCH 7/7] fix:error found duplicate sysprop assignments
+Subject: [PATCH 7/8] fix:error found duplicate sysprop assignments
 
 ---
  base.mk      | 1 -

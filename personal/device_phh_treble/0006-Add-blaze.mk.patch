@@ -1,7 +1,7 @@
 From 7622f46245160a34c8f262b14f90cd2bbbe6b385 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Fri, 19 Aug 2022 20:43:09 +0900
-Subject: [PATCH 6/7] Add blaze.mk
+Subject: [PATCH 6/8] Add blaze.mk
 
 ---
  blaze.mk | 13 +++++++++++++
