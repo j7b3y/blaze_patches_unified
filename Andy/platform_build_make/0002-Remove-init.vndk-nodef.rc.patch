@@ -1,7 +1,7 @@
-From 416150852612a2a1ca93898099bf64a946bd0bfd Mon Sep 17 00:00:00 2001
+From 8f75df2ac0ad8076fe837677e89a18aac297f629 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Wed, 17 Aug 2022 10:39:07 +0900
-Subject: [PATCH 2/2] Remove init.vndk-nodef.rc
+Subject: [PATCH 2/3] Remove init.vndk-nodef.rc
 
 ---
  target/product/gsi/Android.mk         | 10 ----------
@@ -66,5 +66,5 @@ index a2a29ed0f..74413b191 100644
  # Support additional VNDK snapshots
  PRODUCT_EXTRA_VNDK_VERSIONS := \
 -- 
-2.36.1
+2.37.2
 
