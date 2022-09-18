@@ -1,7 +1,7 @@
 From fa6a0a4c1ba368ce058f65e9c025dd933a5b2fdc Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Fri, 19 Aug 2022 20:25:36 +0900
-Subject: [PATCH 2/7] change target name
+Subject: [PATCH 2/8] change target name
 
 ---
  generate.sh | 2 +-

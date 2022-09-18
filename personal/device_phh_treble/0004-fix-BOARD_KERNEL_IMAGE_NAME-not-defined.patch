@@ -1,7 +1,7 @@
 From 1623e43ac2a497da50eed65aaf6080aba37476b6 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Fri, 19 Aug 2022 20:31:11 +0900
-Subject: [PATCH 4/7] fix BOARD_KERNEL_IMAGE_NAME not defined
+Subject: [PATCH 4/8] fix BOARD_KERNEL_IMAGE_NAME not defined
 
 ---
  board-base.mk | 1 +

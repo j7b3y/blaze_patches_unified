@@ -1,7 +1,7 @@
 From 80e9d58288900eaa07f87ff3e20f3d1642c3ae44 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Fri, 19 Aug 2022 20:25:00 +0900
-Subject: [PATCH 1/7] Bye APN Config
+Subject: [PATCH 1/8] Bye APN Config
 
 ---
  base-pre.mk | 4 +---

@@ -1,7 +1,7 @@
 From c6438beb3c5ae76702b33173cbd3cf5462dddd90 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Fri, 19 Aug 2022 20:31:52 +0900
-Subject: [PATCH 5/7] Add broken duplicate rules flag
+Subject: [PATCH 5/8] Add broken duplicate rules flag
 
 ---
  board-base.mk | 3 ++-
