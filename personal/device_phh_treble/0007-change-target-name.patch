@@ -1,7 +1,7 @@
-From fa6a0a4c1ba368ce058f65e9c025dd933a5b2fdc Mon Sep 17 00:00:00 2001
-From: j7b3y <Glowing3386@proton.me>
-Date: Fri, 19 Aug 2022 20:25:36 +0900
-Subject: [PATCH 2/8] change target name
+From 42a695105abeb1138009e3f13a692f2a095aa76d Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:32:02 +0900
+Subject: [PATCH 07/12] change target name
 
 ---
  generate.sh | 2 +-
@@ -21,5 +21,5 @@ index fac8208..5037834 100644
  				baseArch="$arch"
  				if [ "$arch" = "a64" ];then
 -- 
-2.37.1.windows.1
+2.34.1
 

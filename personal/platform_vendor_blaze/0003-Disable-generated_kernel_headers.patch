@@ -1,0 +1,41 @@
+From 8aaee4db394077460c1bba382a901ec4019c3d3f Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 17:03:54 +0900
+Subject: [PATCH 3/3] Disable generated_kernel_headers
+
+---
+ build/soong/Android.bp | 11 -----------
+ 1 file changed, 11 deletions(-)
+
+diff --git a/build/soong/Android.bp b/build/soong/Android.bp
+index 7aa2494d..b4eef27f 100644
+--- a/build/soong/Android.bp
++++ b/build/soong/Android.bp
+@@ -20,9 +20,6 @@ bootstrap_go_package {
+ blaze_generator {
+     name: "generated_kernel_includes",
+ 
+-    // The headers make command
+-    cmd: "$(PATH_OVERRIDE_SOONG) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_SOURCE) O=$(KERNEL_BUILD_OUT_PREFIX)$(genDir) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) headers_install",
+-
+     // Directories that can be imported by a cc_* module generated_headers property
+     export_include_dirs: [
+         "usr/audio/include/uapi",
+@@ -32,14 +29,6 @@ blaze_generator {
+         "usr/techpack/audio/include",
+     ],
+ 
+-    // Sources for dependency tracking
+-    dep_root: "$(TARGET_KERNEL_SOURCE)",
+-    dep_files: [
+-        "Makefile",
+-        "include/**/*",
+-        "arch/$(KERNEL_ARCH)/include/**/*",
+-        "techpack/audio/include/**/*",
+-    ],
+ }
+ 
+ cc_library_headers {
+-- 
+2.34.1
+

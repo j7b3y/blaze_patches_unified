@@ -1,26 +1,25 @@
-From 9880efcc6f9bc941d3f121dca2e628fb6da34a26 Mon Sep 17 00:00:00 2001
-From: j7b3y <Glowing3386@proton.me>
-Date: Fri, 19 Aug 2022 20:29:48 +0900
-Subject: [PATCH 3/8] fix context
+From c68bdfe04929f2911f4cf4c251e72e84cf979d05 Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:32:52 +0900
+Subject: [PATCH 08/12] fix context
 
 ---
- sepolicy/file_contexts | 3 ---
- 1 file changed, 3 deletions(-)
+ sepolicy/file_contexts | 2 --
+ 1 file changed, 2 deletions(-)
 
 diff --git a/sepolicy/file_contexts b/sepolicy/file_contexts
-index d65bb7d..faa7256 100644
+index 999ff97..e02fc87 100644
 --- a/sepolicy/file_contexts
 +++ b/sepolicy/file_contexts
-@@ -7,9 +7,6 @@
+@@ -7,8 +7,6 @@
  /system/bin/asus-motor u:object_r:phhsu_exec:s0
  /system/bin/xiaomi-touch u:object_r:phhsu_exec:s0
  
 -#/system/bin/fsck\.exfat                 u:object_r:fsck_exec:s0
 -/system/bin/fsck\.ntfs                  u:object_r:fsck_exec:s0
--
+ 
  /bt_firmware(/.*)?      u:object_r:bt_firmware_file:s0
  
- /sec_storage(/.*)?      u:object_r:teecd_data_file:s0
 -- 
-2.37.1.windows.1
+2.34.1
 

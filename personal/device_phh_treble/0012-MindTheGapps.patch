@@ -1,7 +1,7 @@
-From cca7e578ec41c3719b00caeda5e219b6152ba7ec Mon Sep 17 00:00:00 2001
-From: j7b3y <Glowing3386@proton.me>
-Date: Fri, 9 Sep 2022 05:40:46 +0900
-Subject: [PATCH 8/8] MindTheGapps
+From 253a46214f81779f4e4c8a5c986dc2ed8fea1068 Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:36:23 +0900
+Subject: [PATCH 12/12] MindTheGapps
 
 ---
  gapps.mk | 53 +----------------------------------------------------
@@ -67,5 +67,5 @@ index 15e12a9..3c3db56 100644
 +include vendor/gapps/arm64/arm64-vendor.mk
 \ No newline at end of file
 -- 
-2.37.1.windows.1
+2.34.1
 

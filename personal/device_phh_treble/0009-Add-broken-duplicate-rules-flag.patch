@@ -1,0 +1,23 @@
+From 0d04fffc7f47eb5fa873636335152f80f0c45359 Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:33:27 +0900
+Subject: [PATCH 09/12] Add broken duplicate rules flag
+
+---
+ board-base.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/board-base.mk b/board-base.mk
+index d4dca9a..504cdbc 100644
+--- a/board-base.mk
++++ b/board-base.mk
+@@ -9,5 +9,6 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+ BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
+ BOARD_EXT4_SHARE_DUP_BLOCKS := true
+ TARGET_NO_KERNEL_OVERRIDE := true
++BUILD_BROKEN_DUP_RULES := true
+ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+     ro.system.ota.json_url=https://raw.githubusercontent.com/j7b3y/treble_pb/master/ota.json
+-- 
+2.34.1
+

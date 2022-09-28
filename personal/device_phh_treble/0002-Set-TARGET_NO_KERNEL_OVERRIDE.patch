@@ -1,0 +1,21 @@
+From b0ee06a51fb00d1171babb0986a5b10abe75ab68 Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:26:08 +0900
+Subject: [PATCH 02/12] Set TARGET_NO_KERNEL_OVERRIDE
+
+---
+ board-base.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/board-base.mk b/board-base.mk
+index 0fe100e..3154c1e 100644
+--- a/board-base.mk
++++ b/board-base.mk
+@@ -8,3 +8,4 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+ 
+ BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
+ BOARD_EXT4_SHARE_DUP_BLOCKS := true
++TARGET_NO_KERNEL_OVERRIDE := true
+-- 
+2.34.1
+

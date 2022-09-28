@@ -1,0 +1,39 @@
+From 27846a571fc19e4da0344004da3f088af480e538 Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 17:11:15 +0900
+Subject: [PATCH 3/4]  fix offline charger v7
+
+---
+ rootdir/init.rc | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/rootdir/init.rc b/rootdir/init.rc
+index 96f6e4fb9..31b5905ba 100644
+--- a/rootdir/init.rc
++++ b/rootdir/init.rc
+@@ -508,7 +508,7 @@ on init
+ # Healthd can trigger a full boot from charger mode by signaling this
+ # property when the power button is held.
+ on property:sys.boot_from_charger_mode=1
+-    class_stop charger
++    class_stop gsicharger
+     trigger late-init
+ 
+ on load_persist_props_action
+@@ -1156,8 +1156,12 @@ on nonencrypted
+ on property:sys.init_log_level=*
+     loglevel ${sys.init_log_level}
+ 
++on charger && property:ro.hardware=mt*
++    write /sys/class/leds/lcd-backlight/trigger "backlight"
++    write /sys/class/android_usb/android0/enable 1
++
+ on charger
+-    class_start charger
++    class_start gsicharger
+ 
+ on property:vold.decrypt=trigger_load_persist_props
+     load_persist_props
+-- 
+2.34.1
+

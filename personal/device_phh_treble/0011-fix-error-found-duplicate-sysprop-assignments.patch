@@ -1,7 +1,7 @@
-From 1d160c0005aba6405c78ae6c73126b3d329ebbf6 Mon Sep 17 00:00:00 2001
-From: j7b3y <Glowing3386@proton.me>
-Date: Fri, 19 Aug 2022 21:06:43 +0900
-Subject: [PATCH 7/8] fix:error found duplicate sysprop assignments
+From e0290f58fe744b276023b43b3b254b4b6672a1b3 Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:35:24 +0900
+Subject: [PATCH 11/12] fix:error found duplicate sysprop assignments
 
 ---
  base.mk      | 1 -
@@ -10,7 +10,7 @@ Subject: [PATCH 7/8] fix:error found duplicate sysprop assignments
  3 files changed, 3 deletions(-)
 
 diff --git a/base.mk b/base.mk
-index c538a27..f5a9702 100644
+index 89b81d6..ca62db4 100644
 --- a/base.mk
 +++ b/base.mk
 @@ -25,7 +25,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -22,10 +22,10 @@ index c538a27..f5a9702 100644
  	
  #Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
 diff --git a/rw-system.sh b/rw-system.sh
-index a32636d..fc17ac4 100644
+index 874ed50..e3ab3f4 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -772,7 +772,6 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
+@@ -773,7 +773,6 @@ if [ -f /system/phh/secure ] || [ -f /metadata/phh/secure ];then
      resetprop_phh ro.build.type user
      resetprop_phh ro.build.selinux 0
  
@@ -43,5 +43,5 @@ index a6c7ede..127b782 100644
  #Disable for everyone for the moment
  ro.sys.sdcardfs=0
 -- 
-2.37.1.windows.1
+2.34.1
 

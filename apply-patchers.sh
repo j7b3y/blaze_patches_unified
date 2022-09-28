@@ -3,7 +3,7 @@
 set +e
 
 patches="$(readlink -f -- $1)"
-trees="Andy personal phh "
+trees="phh personal "
 for tree in $trees; do
     for project in $(cd $patches/$tree; echo *); do
         p="$(tr _ / <<<$project |sed -e 's;platform/;;g')"
@@ -12,7 +12,7 @@ for tree in $trees; do
         [ "$p" == vendor/hardware/overlay ] && p=vendor/hardware_overlay
         pushd $p
         for patch in $patches/$tree/$project/*.patch; do
-            git am $patch
+            git am $patch || git am --abort
         done
         popd
     done

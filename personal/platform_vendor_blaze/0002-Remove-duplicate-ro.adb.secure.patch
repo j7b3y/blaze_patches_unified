@@ -1,26 +1,25 @@
-From b661ef8de62317616e65344a8d5a0a0064fe9932 Mon Sep 17 00:00:00 2001
-From: j7b3y <Glowing3386@proton.me>
-Date: Mon, 15 Aug 2022 07:46:45 +0900
-Subject: [PATCH 2/2] Remove duplicate ro.adb.secure
+From 627c9ab07aa06aefbd7a97400f7e0d7ab5584c4d Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:55:10 +0900
+Subject: [PATCH 2/3] Remove duplicate ro.adb.secure
 
 ---
- config/common.mk | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ config/common.mk | 2 --
+ 1 file changed, 2 deletions(-)
 
 diff --git a/config/common.mk b/config/common.mk
-index 38d82807..b622eb27 100644
+index 46cb2717..fe713c47 100644
 --- a/config/common.mk
 +++ b/config/common.mk
-@@ -17,8 +17,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
+@@ -17,8 +17,6 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
  # Disable ADB authentication
  PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
  else
 -# Enable ADB authentication
 -PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
-+
  
  # Disable extra StrictMode features on all non-engineering builds
  PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 -- 
-2.36.1
+2.34.1
 

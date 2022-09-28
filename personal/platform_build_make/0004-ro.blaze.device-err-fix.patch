@@ -1,0 +1,23 @@
+From be3ddcc642625a2d2553e9bed1333c10b5b9e7ae Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:52:38 +0900
+Subject: [PATCH 4/4]  ro.blaze.device err fix
+
+---
+ tools/buildinfo.sh | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/tools/buildinfo.sh b/tools/buildinfo.sh
+index 8101ef8a7..8912d2766 100755
+--- a/tools/buildinfo.sh
++++ b/tools/buildinfo.sh
+@@ -56,6 +56,5 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
+   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
+ fi
+ 
+-echo "ro.blaze.device=$BLAZE_DEVICE"
+ 
+ echo "# end build properties"
+-- 
+2.34.1
+

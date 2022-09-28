@@ -1,7 +1,7 @@
-From 983a31458fa3763fede1092c12ecd52c12736150 Mon Sep 17 00:00:00 2001
-From: j7b3y <Glowing3386@proton.me>
-Date: Sat, 20 Aug 2022 03:15:05 +0900
-Subject: [PATCH 3/3] build: Bypass vendor calls
+From 2fcbebc71a35fdc322f00658cc1939e8a6db31da Mon Sep 17 00:00:00 2001
+From: android <android>
+Date: Wed, 28 Sep 2022 16:44:22 +0900
+Subject: [PATCH 1/4] build: Bypass vendor calls
 
 ---
  target/product/aosp_arm64.mk | 4 ++--
@@ -23,5 +23,5 @@ index 38f82a2d6..1b24fc647 100644
  #
  # Special settings for GSI releasing
 -- 
-2.37.2
+2.34.1
 
