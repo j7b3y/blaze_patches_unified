@@ -1,0 +1,29 @@
+From 801f0c670381ae7a58098332a2d5da1c59469714 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Thu, 23 Feb 2023 18:18:37 +0900
+Subject: [PATCH 3/3] use pe sepolicy
+
+---
+ core/config.mk | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/core/config.mk b/core/config.mk
+index 60092f581..f77a4d662 100644
+--- a/core/config.mk
++++ b/core/config.mk
+@@ -1267,10 +1267,10 @@ endif
+ dont_bother_goals := out product-graph
+ 
+ ifneq ($(BLAZE_BUILD),)
+-ifneq ($(wildcard device/blaze/sepolicy/common/sepolicy.mk),)
++ifneq ($(wildcard device/pe/sepolicy/common/sepolicy.mk),)
+ ## We need to be sure the global selinux policies are included
+ ## last, to avoid accidental resetting by device configs
+-$(eval include device/blaze/sepolicy/common/sepolicy.mk)
++$(eval include device/pe/sepolicy/common/sepolicy.mk)
+ endif
+ endif
+ 
+-- 
+2.34.1
+

@@ -1,0 +1,24 @@
+From e2ef0ac25f7c3927b6ee0c7c58d3ed1c7b44e183 Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Wed, 22 Feb 2023 15:35:12 +0900
+Subject: [PATCH 2/3] build: Fix device name
+
+---
+ tools/buildinfo.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tools/buildinfo.sh b/tools/buildinfo.sh
+index 69fbdda00..0631d080e 100755
+--- a/tools/buildinfo.sh
++++ b/tools/buildinfo.sh
+@@ -58,6 +58,6 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
+   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
+ fi
+ 
+-echo "ro.blaze.device=$BLAZE_DEVICE"
++echo "ro.blaze.device=$TARGET_PRODUCT"
+ 
+ echo "# end build properties"
+-- 
+2.34.1
+

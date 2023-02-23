@@ -1,0 +1,23 @@
+From 454feb66efe639a22835955c48957eced0223acf Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Thu, 23 Feb 2023 18:51:03 +0900
+Subject: [PATCH 4/4] fix prop error
+
+---
+ config/version.mk | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/config/version.mk b/config/version.mk
+index c1be9122..d94a0ac1 100644
+--- a/config/version.mk
++++ b/config/version.mk
+@@ -55,6 +55,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+   ro.blaze.build.date=$(BLAZE_BUILD_DATE) \
+   ro.blaze.buildtype=$(BLAZE_BUILD_TYPE) \
+   ro.blaze.fingerprint=$(BLAZE_FINGERPRINT) \
+-  ro.blaze.device=$(BLAZE_BUILD) \
+   org.blaze.version=$(BLAZEVERSION) \
+   ro.blaze.maintainer=$(BLAZE_MAINTAINER)
+-- 
+2.34.1
+
