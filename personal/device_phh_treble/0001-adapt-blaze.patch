@@ -48,10 +48,9 @@ new file mode 100644
 index 0000000..e5ec51e
 --- /dev/null
 +++ b/blaze.mk
-@@ -0,0 +1,20 @@
+@@ -0,0 +1,19 @@
 +$(call inherit-product, vendor/blaze/config/common.mk)
 +$(call inherit-product, vendor/blaze/config/BoardConfigSoong.mk)
-+$(call inherit-product, device/blaze/sepolicy/common/sepolicy.mk)
 +-include vendor/blaze/build/core/config.mk
 +-include vendor/blaze/build/core/apicheck.mk
 +
