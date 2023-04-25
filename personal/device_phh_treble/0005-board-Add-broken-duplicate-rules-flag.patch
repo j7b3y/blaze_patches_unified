@@ -1,0 +1,23 @@
+From fa73b0339a6d7684c27e308d062dc515cae04b7e Mon Sep 17 00:00:00 2001
+From: j7b3y <Glowing3386@proton.me>
+Date: Wed, 22 Feb 2023 15:26:56 +0900
+Subject: [PATCH 05/10] board: Add broken duplicate rules flag
+
+---
+ board-base.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/board-base.mk b/board-base.mk
+index 2cb5dbc..c38e385 100644
+--- a/board-base.mk
++++ b/board-base.mk
+@@ -8,5 +8,6 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := device/phh/treble/framework_manifest.xml
+ 
+ BOARD_ROOT_EXTRA_FOLDERS += bt_firmware sec_storage efs persist
+ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
++BUILD_BROKEN_DUP_RULES := true
+ 
+ BOARD_ROOT_EXTRA_SYMLINKS := $(filter-out $(BOARD_ROOT_EXTRA_SYMLINKS),/mnt/vendor/persist:/persist)
+-- 
+2.34.1
+
