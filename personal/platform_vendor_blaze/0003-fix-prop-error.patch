@@ -1,14 +1,14 @@
-From 454feb66efe639a22835955c48957eced0223acf Mon Sep 17 00:00:00 2001
+From b2140e259d6913a56bc6a199cc1cc0777bbfcb38 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Thu, 23 Feb 2023 18:51:03 +0900
-Subject: [PATCH 4/4] fix prop error
+Subject: [PATCH 3/4] fix prop error
 
 ---
  config/version.mk | 1 -
  1 file changed, 1 deletion(-)
 
 diff --git a/config/version.mk b/config/version.mk
-index c1be9122..d94a0ac1 100644
+index bd361ead..6aeb08b4 100644
 --- a/config/version.mk
 +++ b/config/version.mk
 @@ -55,6 +55,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

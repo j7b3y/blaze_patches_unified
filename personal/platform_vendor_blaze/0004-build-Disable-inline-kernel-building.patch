@@ -1,0 +1,24 @@
+From 6fe09ab2ad55b3a2e8f54f72aa8c7a73c20524a0 Mon Sep 17 00:00:00 2001
+From: j7b3y <glowing3386@proton.me>
+Date: Thu, 24 Aug 2023 18:29:48 +0900
+Subject: [PATCH 4/4] build: Disable inline kernel building
+
+---
+ config/common.mk | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/config/common.mk b/config/common.mk
+index 9f63717e..d1e0ba8f 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -246,3 +246,6 @@ endif
+ 
+ # Packages
+ include vendor/blaze/config/packages.mk
++
++#Target No Kernel Override
++TARGET_NO_KERNEL_OVERRIDE := true
+\ No newline at end of file
+-- 
+2.34.1
+

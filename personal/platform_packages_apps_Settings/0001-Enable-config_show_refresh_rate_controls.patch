@@ -1,0 +1,25 @@
+From 03c4a92ffd0f385e85d23c360e6c822da36699bd Mon Sep 17 00:00:00 2001
+From: j7b3y <glowing3386@proton.me>
+Date: Thu, 24 Aug 2023 18:32:51 +0900
+Subject: [PATCH] Enable config_show_refresh_rate_controls
+
+---
+ res/values/blaze_config.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/res/values/blaze_config.xml b/res/values/blaze_config.xml
+index e59ce08ce0..3fa3ecdfaa 100644
+--- a/res/values/blaze_config.xml
++++ b/res/values/blaze_config.xml
+@@ -2,7 +2,7 @@
+ <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+ 
+     <!-- Whether to show min/max refresh rate in display settings -->
+-    <bool name="config_show_refresh_rate_controls">false</bool>
++    <bool name="config_show_refresh_rate_controls">true</bool>
+     <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
+ 
+ </resources>
+-- 
+2.34.1
+

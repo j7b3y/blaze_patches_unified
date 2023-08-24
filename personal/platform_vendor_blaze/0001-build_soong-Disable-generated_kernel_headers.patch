@@ -1,4 +1,4 @@
-From 0efcb83d02c7052ff2950077f717b956cc9b37cf Mon Sep 17 00:00:00 2001
+From c6442df87e748404f39295925840a669670d95d1 Mon Sep 17 00:00:00 2001
 From: j7b3y <Glowing3386@proton.me>
 Date: Wed, 22 Feb 2023 16:03:25 +0900
 Subject: [PATCH 1/4] build_soong: Disable generated_kernel_headers
@@ -8,7 +8,7 @@ Subject: [PATCH 1/4] build_soong: Disable generated_kernel_headers
  1 file changed, 12 deletions(-)
 
 diff --git a/build/soong/Android.bp b/build/soong/Android.bp
-index 2e761a56..a4d5b384 100644
+index 4f4462dd..76113ab0 100644
 --- a/build/soong/Android.bp
 +++ b/build/soong/Android.bp
 @@ -20,9 +20,6 @@ bootstrap_go_package {
