@@ -1,0 +1,43 @@
+From 46ea93d5c629b5e47e9360e64b885df80389f19a Mon Sep 17 00:00:00 2001
+From: j7b3y <glowing3386@proton.me>
+Date: Sat, 14 Oct 2023 22:38:01 +0900
+Subject: [PATCH 3/3] build: Disable inline kernel building
+
+---
+ build/tasks/kernel.mk | 3 +++
+ config/common.mk      | 2 ++
+ 2 files changed, 5 insertions(+)
+
+diff --git a/build/tasks/kernel.mk b/build/tasks/kernel.mk
+index eb7844b3..0321f8dd 100644
+--- a/build/tasks/kernel.mk
++++ b/build/tasks/kernel.mk
+@@ -72,6 +72,8 @@
+ #                                          kernel sources are present
+ 
+ ifneq ($(TARGET_NO_KERNEL),true)
++ifneq ($(TARGET_NO_KERNEL_OVERRIDE),true)
++
+ 
+ ## Externally influenced variables
+ KERNEL_SRC := $(TARGET_KERNEL_SOURCE)
+@@ -610,4 +612,5 @@ dtboimage: $(INSTALLED_DTBOIMAGE_TARGET)
+ .PHONY: dtbimage
+ dtbimage: $(INSTALLED_DTBIMAGE_TARGET)
+ 
++endif # TARGET_NO_KERNEL_OVERRIDE
+ endif # TARGET_NO_KERNEL
+\ No newline at end of file
+diff --git a/config/common.mk b/config/common.mk
+index 1a98ea22..0f8de77b 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -240,3 +240,5 @@ endif
+ 
+ # Packages
+ include vendor/blaze/config/packages.mk
++
++TARGET_NO_KERNEL_OVERRIDE := true
+-- 
+2.34.1
+

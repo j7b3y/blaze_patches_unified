@@ -3,7 +3,7 @@
 set +e
 
 patches="$(readlink -f -- $1)"
-trees="phh personal "
+trees="phh prerequisite personal "
 for tree in $trees; do
     for project in $(cd $patches/$tree; echo *); do
         p="$(tr _ / <<<$project |sed -e 's;platform/;;g')"
